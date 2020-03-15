@@ -17,8 +17,8 @@ export default function Stats({ url }) {
   return (
     <StatGrid>
       <h1>
-        World <br />
-        Wide Stat
+        Global <br />
+        Stat
       </h1>
       <StatBlock>
         <span>

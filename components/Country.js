@@ -9,15 +9,8 @@ const StatCard = styled.div`
   grid-gap: 1em;
   padding: 2em;
   border-radius: 20px;
-  background: linear-gradient(225deg, #046407, #045406);
-  box-shadow: -20px 20px 60px #034f06, 20px -20px 60px #056b08;
-  &:before {
-    content: 'COVID19';
-    font-size: 5em;
-    position: absolute;
-    top: 10px;
-    left: 130px;
-  }
+  background: linear-gradient(145deg, #046407, #045406);
+  box-shadow: 20px 20px 60px #034f06, -20px -20px 60px #056b08;
   h2 {
     grid-column: 1 / 3;
     grid-row: 1;
@@ -38,12 +31,30 @@ const StatCard = styled.div`
       grid-column: 3;
     }
   }
-  select {
-    border: none;
-    background: linear-gradient(225deg, #046407, #045406);
-    box-shadow: -20px 20px 60px #034f06, 20px -20px 60px #056b08;
-    color: white;
-    width: 70px;
+  label {
+    position: relative;
+    &:after {
+      content: '▾';
+      font-size: 15px;
+      position: absolute;
+      bottom: 18px;
+    }
+    select {
+      border: none;
+      padding: 1em;
+      background: #045d07;
+      box-shadow: inset 20px -20px 60px #034f06, inset -20px 20px 60px #056b08;
+      color: white;
+      width: 70px;
+      font-size: 16px;
+      color: #eaeaea;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      position: relative;
+    }
   }
   p {
     grid-column: 1 / 4;
@@ -62,18 +73,20 @@ export default function Country() {
   return (
     <StatCard>
       <h2>{selectedCountry} Stat</h2>
-      <select
-        defaultValue='USA'
-        onChange={e => {
-          setSelectedCountry(e.target.value);
-        }}
-      >
-        {Object.entries(countries.countries).map(([country, code]) => (
-          <option key={code} value={countries.iso3[code]}>
-            {country}
-          </option>
-        ))}
-      </select>
+      <label>
+        <select
+          defaultValue='USA'
+          onChange={e => {
+            setSelectedCountry(e.target.value);
+          }}
+        >
+          {Object.entries(countries.countries).map(([country, code]) => (
+            <option key={code} value={countries.iso3[code]}>
+              {country}
+            </option>
+          ))}
+        </select>
+      </label>
       <Stats
         url={`https://covid19.mathdro.id/api/countries/${selectedCountry}`}
       />
