@@ -13,6 +13,13 @@ const Stat = styled.div`
     font-size: 0.9em;
     font-weight: 100;
   }
+
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 1.5em;
+      font-weight: 100;
+    }
+  }
 `;
 
 export default function Stats({ url }) {

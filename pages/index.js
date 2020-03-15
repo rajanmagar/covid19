@@ -30,13 +30,33 @@ section {
     width: 100%;
     height: calc(100vh - 180px);
     width: calc(100vw - 400px);
-    apdding: 1em;
     background: linear-gradient(225deg, #046407, #045406);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     position: relative;
     .para {
         padding: 1em;
         font-size: 12px;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 20px;
+      grid-gap: 1em;
+      height: calc(100vh - 80px);
+      width: calc(100vw - 30px);
+      .para {
+        grid-column: 1;
+        grid-row: 1 / 2;
+        text-align: center;
+      }
+      div {
+        grid-column: 1;
+        grid-row: 2 / 3;
+        width: calc(100% - 90px);
+      }
+      div + div {
+        grid-column: 1;
+        grid-row: 3 / 4;
+      }
     }
 }
 

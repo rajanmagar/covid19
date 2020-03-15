@@ -15,10 +15,6 @@ const StatCard = styled.div`
     grid-column: 1 / 3;
     grid-row: 1;
   }
-  select {
-    grid-column: 3;
-    grid-row: 1;
-  }
   div {
     grid-row: 2;
     &:nth-child(1) {
@@ -40,6 +36,8 @@ const StatCard = styled.div`
       bottom: 18px;
     }
     select {
+      grid-column: 3;
+      grid-row: 1;
       border: none;
       padding: 1em;
       background: #045d07;
@@ -60,6 +58,34 @@ const StatCard = styled.div`
     grid-column: 1 / 4;
     font-size: 11px;
   }
+  @media (max-width: 768px) {
+    padding: 1em;
+    grid-gap: 0.3em;
+    align-items: center;
+    justify-self: center;
+    h2 {
+      font-size: 0.9em;
+    }
+    label {
+      select {
+        font-size: 0.9em;
+      }
+    }
+    div {
+      grid-row: 2;
+      &:nth-child(3) {
+        grid-column: 1 / 2;
+      }
+    }
+    div + div {
+      grid-row: 2;
+      grid-column: 2 / 3;
+    }
+    div + div + div {
+      grid-row: 2;
+      grid-column: 3 / 4;
+    }
+  }
 `;
 
 export default function Country() {
@@ -75,7 +101,7 @@ export default function Country() {
       <h2>{selectedCountry} Stat</h2>
       <label>
         <select
-          defaultValue='USA'
+          defaultValue={`USA`}
           onChange={e => {
             setSelectedCountry(e.target.value);
           }}
