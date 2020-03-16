@@ -1,6 +1,6 @@
-# coronaa
-
-corona virus updates
+<h1 align="center">
+  Covid19 [Coronaa](http://coronaa.netlify.com/)
+</h1>
 
 ## Tech Stack
 
