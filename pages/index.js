@@ -300,7 +300,7 @@ export default function IndexPage() {
         <span>made with virus @2020</span>
         <span>
           <a
-            href='http://https://www.buymeacoffee.com/kUHJuif'
+            href='https://www.buymeacoffee.com/kUHJuif'
             target='_blank'
             rel='noopener noreferrer'
           >
