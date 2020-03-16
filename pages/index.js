@@ -25,6 +25,7 @@ section {
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 70px auto 70px;
     grid-gap: 1em;
+    padding: 1em 0;
     justify-content: center;
     align-items: center;
     width: 100%;
