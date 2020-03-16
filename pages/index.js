@@ -84,10 +84,12 @@ section {
         grid-row: 1 / 2;
         text-align: center;
       }
-      div {
+      > div {
         grid-column: 1;
         grid-row: 2 / 3;
         width: calc(100% - 90px);
+        background: #307e57;
+        box-shadow: 20px 20px 60px #296b4a, -20px -20px 60px #379164;
       }
       div + div {
         grid-column: 1;
