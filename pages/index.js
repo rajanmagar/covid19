@@ -144,7 +144,7 @@ section {
       grid-template-columns: 1fr;
       grid-gap: 1rem;
       h1 {
-        font-size: .9em;
+        font-size: 1em;
         margin-bottom: 1em;
       }
       @media (max-width: 768px) {
@@ -156,6 +156,9 @@ section {
         border-radius: 21px;
         color: #333;
         margin-top: 1em;
+        div > span {
+          font-size: .9em;
+        }
       }
     }
     .para {
