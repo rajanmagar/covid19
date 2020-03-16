@@ -3,6 +3,8 @@ import Country from '../components/Country';
 import { createGlobalStyle } from 'styled-components';
 import Logo from '../components/Logo';
 import Head from 'next/head';
+import LogRocket from 'logrocket';
+LogRocket.init('iusl8y/corona');
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
