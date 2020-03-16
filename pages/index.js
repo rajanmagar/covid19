@@ -2,7 +2,9 @@ import SideState from '../components/SideStat';
 import Country from '../components/Country';
 import { createGlobalStyle } from 'styled-components';
 import Logo from '../components/Logo';
+import Github from '../components/Github';
 import Head from 'next/head';
+
 import LogRocket from 'logrocket';
 LogRocket.init('iusl8y/corona');
 
@@ -33,6 +35,7 @@ section {
     align-items: center;
     width: 100%;
     max-width: 1340px;
+    max-height: 600px;
     height: calc(100vh - 180px);
     width: calc(100vw - 400px);
     background: #307e57;
@@ -297,6 +300,15 @@ export default function IndexPage() {
             rel='noopener noreferrer'
           >
             👐 Contribute
+          </a>
+        </span>
+        <span>
+          <a
+            href='https://github.com/mathdroid/covid-19-api'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <Github /> Data api by mathdroid
           </a>
         </span>
         <span>made with virus @2020</span>
