@@ -152,7 +152,7 @@ section {
       @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
-        padding: 2em 0;
+        padding: 1em 0;
         align-items: center;
         background: #eaeaea;
         border-radius: 21px;
@@ -169,6 +169,9 @@ section {
         font-size: 12px;
         grid-row: 2;
         grid-column: 1 / 2;
+        @media (max-width: 768px) {
+          padding: 1em;
+        }
     }
     .tips {
       grid-row: 3;
