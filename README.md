@@ -1,5 +1,5 @@
 <h1 align="center">
-  Covid19 [Coronaa](http://coronaa.netlify.com/)
+  Covid19 🦠
 </h1>
 
 ## Tech Stack
