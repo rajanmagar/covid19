@@ -46,7 +46,11 @@ section {
       font-size: 12px;
       text-align: center;
       padding: 2em;
-    } 
+    }
+    > div {
+      background: #307e57;
+      box-shadow: 20px 20px 60px #296b4a, -20px -20px 60px #379164;
+    }
     header {
       grid-column: 1 / 4;
       grid-row: 1;
