@@ -171,7 +171,7 @@ section {
     .para {
         padding: 2em;
         text-align: center;
-        font-size: 12px;
+        font-size: 14px;
         grid-row: 2;
         grid-column: 1 / 2;
         @media (max-width: 768px) {
@@ -308,7 +308,7 @@ export default function IndexPage() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            <Github /> Data api by mathdroid
+            <Github /> Api by mathdroid
           </a>
         </span>
         <span>made with virus @2020</span>
