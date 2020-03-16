@@ -247,6 +247,9 @@ footer {
         color: #eaeaea;
       }
   }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 } 
 `;
 
