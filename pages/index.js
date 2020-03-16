@@ -92,7 +92,7 @@ section {
       }
       @media (max-width: 768px) {
         padding: 1em;
-        grid-gap: 0.3em;
+        grid-gap: .7em;
         align-items: center;
         justify-self: center;
         h2 {
