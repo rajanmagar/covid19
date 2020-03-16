@@ -120,10 +120,33 @@ section {
         }
       }
     }
+    .stat-value {
+      text-align: center;
+      padding: 2em 0;
+      h3 {
+        font-size: 2.5em;
+        font-weight: 100;
+      }
+      span {
+        font-size: 0.9em;
+        font-weight: 100;
+      }
+
+      @media (max-width: 768px) {
+        h3 {
+          font-size: 1.5em;
+          font-weight: 100;
+        }
+      }
+    }
     .sidestat {
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 1rem;
+      h1 {
+        font-size: .9em;
+        margin-bottom: 1em;
+      }
       @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
