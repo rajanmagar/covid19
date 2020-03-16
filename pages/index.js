@@ -2,6 +2,7 @@ import SideState from '../components/SideStat';
 import Country from '../components/Country';
 import { createGlobalStyle } from 'styled-components';
 import Logo from '../components/Logo';
+import Head from 'next/head';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
@@ -243,6 +244,14 @@ footer {
 export default function IndexPage() {
   return (
     <>
+      <Head>
+        <title>COVID19 - Corona Virus</title>
+        <meta
+          name='viewport'
+          content='initial-scale=1.0, width=device-width'
+          key='viewport'
+        />
+      </Head>
       <GlobalStyle />
       <section>
         <header>
