@@ -251,6 +251,18 @@ export default function IndexPage() {
           content='initial-scale=1.0, width=device-width'
           key='viewport'
         />
+        <meta property='og:title' content='COVID19 - Corona Virus' />
+        <meta property='og:site_name' content='Corona Flu' />
+        <meta property='og:url' content='http://coronaa.netlify.com/' />
+        <meta
+          property='og:description'
+          content='coronavirus is a novel virus named for the crownlike spikes that protrude from its surface. The coronavirus can infect both animals and people and can cause a range of respiratory illnes.'
+        />
+        <meta property='og:type' content='article' />
+        <meta
+          property='og:image'
+          content='https://i0.wp.com/media.globalnews.ca/videostatic/news/6j1uu5n65i-39qkuacwaq/RAW_3R63_Coronavirus_explainer_thumb_1_.jpg?w=1040&quality=70&strip=all'
+        />
       </Head>
       <GlobalStyle />
       <section>
