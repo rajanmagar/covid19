@@ -6,6 +6,7 @@ import Logo from '../components/Logo';
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 html {
+  font-family: 'Quicksand', sans-serif;
     body {
         height: 100vh;
         display: grid;
@@ -13,7 +14,6 @@ html {
         align-items: center;
         background: linear-gradient(225deg,#006550,#071700);
         color: #eaeaea;
-        font-family: 'Quicksand', sans-serif;
     }
 }
 *, *:after, *:before {
