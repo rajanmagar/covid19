@@ -1,8 +1,10 @@
 import SideState from '../components/SideStat';
 import Country from '../components/Country';
 import { createGlobalStyle } from 'styled-components';
+import Logo from '../components/Logo';
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 html {
     font-family: 'Quicksand', sans-serif;
     body {
@@ -15,34 +17,60 @@ html {
     }
 }
 *, *:after, *:before {
-    @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-    font-family: 'Quicksand', sans-serif;
     margin: 0;
     padding: 0
 }
 section {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: auto 20px;
-    grid-gap: 2em;
+    grid-template-rows: 30px auto;
+    grid-gap: 1em;
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 1340px;
     height: calc(100vh - 180px);
     width: calc(100vw - 400px);
-    background: linear-gradient(225deg, #046407, #045406);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    background: #307e57;
     position: relative;
     .para {
         padding: 1em;
         font-size: 12px;
+        grid-row: 2;
+        grid-column: 1 / 2;
+    }
+    header {
+      grid-column: 1 / 4;
+      grid-row: 1;
+      justify-self: center;
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        fill: #eaeaea;
+      }
+      span {
+        font-size: 2em;
+      }
     }
     @media (max-width: 768px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 20px;
-      grid-gap: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       height: calc(100vh - 80px);
       width: calc(100vw - 30px);
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+          fill: #eaeaea;
+        }
+      }
       .para {
         grid-column: 1;
         grid-row: 1 / 2;
@@ -79,6 +107,10 @@ export default function IndexPage() {
     <>
       <GlobalStyle />
       <section>
+        <header>
+          <Logo />
+          <span>COVID-19</span>
+        </header>
         <p className='para'>
           Coronavirus disease (COVID-19) is an infectious disease caused by a
           new virus that had not been previously identified in humans.

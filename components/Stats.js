@@ -40,7 +40,7 @@ export default function Stats({ url }) {
         <h3>{stats.recovered.value}</h3>
         <span>Recovered</span>
       </Stat>
-      <p>last seen {moment(stats.lastUpdate).fromNow()}</p>
+      <p>last updated {moment(stats.lastUpdate).fromNow()}</p>
     </>
   );
 }

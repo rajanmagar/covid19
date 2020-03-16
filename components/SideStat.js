@@ -6,28 +6,24 @@ const StatGrid = styled.div`
   grid-template-columns: 1fr;
   grid-gap: 1rem;
   @media (max-width: 768px) {
-    grid-template-rows: repeat(4, 50px);
-    justify-self: center;
-    div {
-      width: 100%;
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-    }
-    div + div {
-      grid-row: 3 / 4;
-    }
-    div + div + div {
-      grid-row: 4 / 5;
-    }
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    align-items: center;
+    background: #eaeaea;
+    border-radius: 21px;
+    color: #333;
+    margin-top: 1em;
   }
 `;
 
 const StatBlock = styled.div`
+  padding: 0.5em;
   font-size: 0.8rem;
 `;
 
 export default function Stats({ url }) {
-  const { stats, loading, error } = useStats(url);
+  const { stats } = useStats(url);
   if (!stats) return <p>Loading...</p>;
   return (
     <StatGrid>

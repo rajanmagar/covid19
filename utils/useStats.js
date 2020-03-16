@@ -16,6 +16,5 @@ export default function useStats(url) {
     }
     fetchData();
   }, [url]);
-  console.log(stats);
   return { stats, loading, error };
 }

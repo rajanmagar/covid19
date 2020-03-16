@@ -9,8 +9,8 @@ const StatCard = styled.div`
   grid-gap: 1em;
   padding: 2em;
   border-radius: 20px;
-  background: linear-gradient(145deg, #046407, #045406);
-  box-shadow: 20px 20px 60px #034f06, -20px -20px 60px #056b08;
+  background: #307e57;
+  box-shadow: 20px 20px 60px #296b4a, -20px -20px 60px #379164;
   h2 {
     grid-column: 1 / 3;
     grid-row: 1;
@@ -40,8 +40,8 @@ const StatCard = styled.div`
       grid-row: 1;
       border: none;
       padding: 1em;
-      background: #045d07;
-      box-shadow: inset 20px -20px 60px #034f06, inset -20px 20px 60px #056b08;
+      background: #307e57;
+      box-shadow: inset 20px 20px 60px #296b4a, inset -20px -20px 60px #379164;
       color: white;
       width: 70px;
       font-size: 16px;
