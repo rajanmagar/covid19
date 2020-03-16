@@ -101,6 +101,7 @@ section {
         label {
           select {
             font-size: 0.9em;
+            width: 100px;
           }
         }
         div {
