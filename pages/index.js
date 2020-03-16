@@ -47,10 +47,6 @@ section {
       text-align: center;
       padding: 2em;
     }
-    > div {
-      background: #307e57;
-      box-shadow: 20px 20px 60px #296b4a, -20px -20px 60px #379164;
-    }
     header {
       grid-column: 1 / 4;
       grid-row: 1;
@@ -132,10 +128,10 @@ export default function IndexPage() {
         <Country />
         <SideState url='https://covid19.mathdro.id/api' />
         <p className='tips'>
-          Wash your hands frequently ● Maintain social distancing ● Avoid
-          touching eyes, nose and mouth ● If you have fever, cough and
-          difficulty breathing, seek medical care early ● Cover coughs and
-          sneezes ● Stay home if you’re sick
+          Wash your hands frequently ● Maintain social distance ● Avoid touching
+          eyes, nose and mouth ● If you have fever, cough and difficulty
+          breathing, seek medical care early ● Cover coughs and sneezes ● Stay
+          home if you’re sick
         </p>
       </section>
       <footer>
