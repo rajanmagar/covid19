@@ -265,7 +265,7 @@ export default function IndexPage() {
         <meta property='og:type' content='article' />
         <meta
           property='og:image'
-          content='https://i0.wp.com/media.globalnews.ca/videostatic/news/6j1uu5n65i-39qkuacwaq/RAW_3R63_Coronavirus_explainer_thumb_1_.jpg?w=1040&quality=70&strip=all'
+          content='https://thenypost.files.wordpress.com/2019/04/ocean-virus.jpg?quality=80&strip=all'
         />
       </Head>
       <GlobalStyle />
