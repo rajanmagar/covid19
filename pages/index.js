@@ -134,6 +134,7 @@ section {
       }
 
       @media (max-width: 768px) {
+        padding: .5em 0;
         h3 {
           font-size: 1.5em;
           font-weight: 100;
