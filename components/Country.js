@@ -6,8 +6,8 @@ import styled from 'styled-components';
 const StatCard = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  padding: 2em;
+  grid-gap: 0.5em;
+  padding: 1em 2em;
   border-radius: 20px;
   background: #307e57;
   box-shadow: 20px 20px 60px #296b4a, -20px -20px 60px #379164;
@@ -34,6 +34,7 @@ const StatCard = styled.div`
       font-size: 15px;
       position: absolute;
       bottom: 18px;
+      left: 90px;
     }
     select {
       grid-column: 3;
@@ -43,7 +44,7 @@ const StatCard = styled.div`
       background: #307e57;
       box-shadow: inset 20px 20px 60px #296b4a, inset -20px -20px 60px #379164;
       color: white;
-      width: 70px;
+      width: 120px;
       font-size: 16px;
       color: #eaeaea;
       -webkit-appearance: none;
@@ -92,7 +93,7 @@ export default function Country() {
   const { stats: countries, loading, error } = useStats(
     'https://covid19.mathdro.id/api/countries'
   );
-  const [selectedCountry, setSelectedCountry] = useState('USA');
+  const [selectedCountry, setSelectedCountry] = useState('IN');
   if (!countries) return <p>Loading...</p>;
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
@@ -101,7 +102,7 @@ export default function Country() {
       <h2>{selectedCountry} Stat</h2>
       <label>
         <select
-          defaultValue={`USA`}
+          defaultValue='IND'
           onChange={e => {
             setSelectedCountry(e.target.value);
           }}

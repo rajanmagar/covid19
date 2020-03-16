@@ -23,7 +23,7 @@ html {
 section {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 30px auto;
+    grid-template-rows: 70px auto 70px;
     grid-gap: 1em;
     justify-content: center;
     align-items: center;
@@ -40,6 +40,13 @@ section {
         grid-row: 2;
         grid-column: 1 / 2;
     }
+    .tips {
+      grid-row: 3;
+      grid-column: 1 / 4;
+      font-size: 12px;
+      text-align: center;
+      padding: 2em;
+    } 
     header {
       grid-column: 1 / 4;
       grid-row: 1;
@@ -118,6 +125,12 @@ export default function IndexPage() {
         </p>
         <Country />
         <SideState url='https://covid19.mathdro.id/api' />
+        <p className='tips'>
+          Wash your hands frequently ● Maintain social distancing ● Avoid
+          touching eyes, nose and mouth ● If you have fever, cough and
+          difficulty breathing, seek medical care early ● Cover coughs and
+          sneezes ● Stay home if you’re sick
+        </p>
       </section>
       <footer>
         <span>
