@@ -41,8 +41,8 @@ section {
     background: #307e57;
     position: relative;
     @media (max-width: 350px) {
-    height: calc(100vh - 5px);
-    width: calc(100vw - 3px);
+    height: calc(100vh - 5px) !important;
+    width: calc(100vw - 3px) !important;
     }
     .countrystat {
       display: grid;
