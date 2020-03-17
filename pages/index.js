@@ -40,9 +40,9 @@ section {
     width: calc(100vw - 400px);
     background: #307e57;
     position: relative;
-    @media (max-width: 350px) {
+    @media (max-width: 460px) {
     height: calc(100vh - 5px) !important;
-    width: calc(100vw - 3px) !important;
+    width: 100vw !important;
     }
     .countrystat {
       display: grid;
@@ -253,6 +253,9 @@ footer {
   }
   @media (max-width: 768px) {
     flex-wrap: wrap;
+    span {
+      padding: 0 1em;
+    }
   }
 } 
 `;
