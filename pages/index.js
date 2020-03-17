@@ -40,6 +40,10 @@ section {
     width: calc(100vw - 400px);
     background: #307e57;
     position: relative;
+    @media (max-width: 350px) {
+    height: calc(100vh - 5px);
+    width: calc(100vw - 3px);
+    }
     .countrystat {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
