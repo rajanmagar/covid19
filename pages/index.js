@@ -73,9 +73,10 @@ section {
         position: relative;
         &:after {
           content: '▾';
-          font-size: 15px;
+          font-size: 20px;
+          font-weight: bolder;
           position: absolute;
-          bottom: 18px;
+          bottom: 14px;
           left: 90px;
         }
         select {
@@ -348,8 +349,7 @@ export default function IndexPage() {
           </a>
         </span>
         <span>
-          <Github />
-          Made by{' '}
+          <Github /> Made by{' '}
           <a
             href='http://https://github.com/rajanmagar'
             target='_blank'
