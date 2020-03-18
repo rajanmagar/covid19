@@ -155,7 +155,7 @@ section {
     .sidestat {
       display: grid;
       grid-template-columns: 1fr;
-      grid-gap: 1rem;
+      grid-gap: .3rem;
       padding: 1em 2em;
       h1 {
         font-size: 1em;
