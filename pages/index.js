@@ -97,6 +97,9 @@ section {
           -o-appearance: none;
           appearance: none;
           position: relative;
+          &:focus {
+            outline: none;
+          }
         }
       }
       p {
