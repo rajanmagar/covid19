@@ -1,6 +1,5 @@
 import useStats from '../utils/useStats';
 import moment from 'moment';
-import styled from 'styled-components';
 
 export default function Stats({ url }) {
   const { stats } = useStats(url);

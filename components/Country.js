@@ -1,7 +1,6 @@
 import useStats from '../utils/useStats';
 import Stats from './Stats';
 import { useState } from 'react';
-import styled from 'styled-components';
 
 export default function Country() {
   const { stats: countries, loading, error } = useStats(

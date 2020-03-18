@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 import Logo from '../components/Logo';
 import Github from '../components/Github';
 import Head from 'next/head';
+import moment from 'moment';
 
 import LogRocket from 'logrocket';
 LogRocket.init('iusl8y/corona');
@@ -81,6 +82,7 @@ section {
           grid-column: 3;
           grid-row: 1;
           border: none;
+          border-radius: 21px;
           padding: 1em;
           background: #307e57;
           box-shadow: inset 20px 20px 60px #296b4a, inset -20px -20px 60px #379164;
@@ -186,13 +188,17 @@ section {
       grid-row: 3;
       grid-column: 1 / 4;
       font-size: 12px;
+      font-style: italic;
       text-align: center;
       padding: 2em;
     }
     header {
       grid-column: 1 / 4;
       grid-row: 1;
-      justify-self: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
       svg {
         width: 24px;
         height: 24px;
@@ -202,23 +208,37 @@ section {
       span {
         font-size: 2em;
       }
+      .date {
+        font-size: 1em;
+        background: linear-gradient(145deg, #2b714e, #33875d);
+        box-shadow:  20px 20px 60px #296b4a, 
+                    -20px -20px 60px #379164;
+        color: #white;
+        border-radius: 50px;
+        padding: 1em;
+      }
     }
     @media (max-width: 768px) {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: calc(100vh - 80px);
       width: calc(100vw - 30px);
+      flex-direction: column;
       header {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         svg {
           width: 24px;
           height: 24px;
           margin-right: 10px;
           fill: #eaeaea;
+        }
+        .date {
+          font-size: .7em;
+          padding: 1em;
         }
       }
       .para {
@@ -286,8 +306,11 @@ export default function IndexPage() {
       <GlobalStyle />
       <section>
         <header>
-          <Logo />
-          <span>COVID-19</span>
+          <div>
+            <Logo />
+            <span>COVID-19</span>
+          </div>
+          <span className='date'>{moment(new Date()).format('ll')}</span>
         </header>
         <p className='para'>
           Coronavirus disease (COVID-19) is an infectious disease caused by a
@@ -296,6 +319,7 @@ export default function IndexPage() {
         <Country />
         <SideState url='https://covid19.mathdro.id/api' />
         <p className='tips'>
+          <span>Precautions: </span>
           Wash your hands frequently ● Maintain social distance ● Avoid touching
           eyes, nose and mouth ● If you have fever, cough and difficulty
           breathing, seek medical care early ● Cover coughs and sneezes ● Stay
@@ -321,7 +345,17 @@ export default function IndexPage() {
             <Github /> Api by mathdroid
           </a>
         </span>
-        <span>made with virus @2020</span>
+        <span>
+          made by{' '}
+          <a
+            href='http://https://github.com/rajanmagar'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <u>rajan</u>
+          </a>{' '}
+          @2020
+        </span>
         <span>
           <a
             href='https://www.buymeacoffee.com/kUHJuif'

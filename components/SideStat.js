@@ -14,17 +14,17 @@ export default function Stats({ url }) {
       <h1>Global Stat</h1>
       <StatBlock>
         <span>
-          ⚪ <b>{stats.confirmed.value}</b> confirmed cases
+          ● <b>{stats.confirmed.value}</b> confirmed cases
         </span>
       </StatBlock>
       <StatBlock>
         <span>
-          🔴 <b>{stats.deaths.value}</b> death cases
+          ● <b>{stats.deaths.value}</b> death cases
         </span>
       </StatBlock>
       <StatBlock>
         <span>
-          🔵 <b>{stats.recovered.value}</b> recover cases
+          ● <b>{stats.recovered.value}</b> recover cases
         </span>
       </StatBlock>
     </div>
