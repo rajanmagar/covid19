@@ -37,7 +37,7 @@ section {
     width: 100%;
     max-width: 1340px;
     max-height: 600px;
-    height: calc(100vh - 180px);
+    height: auto;
     width: calc(100vw - 400px);
     background: #307e57;
     position: relative;
@@ -156,6 +156,7 @@ section {
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 1rem;
+      padding: 1em 2em;
       h1 {
         font-size: 1em;
         margin-bottom: 1em;
@@ -191,6 +192,7 @@ section {
       font-style: italic;
       text-align: center;
       padding: 2em;
+      margin-top: 2em;
     }
     header {
       grid-column: 1 / 4;

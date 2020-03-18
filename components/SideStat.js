@@ -11,7 +11,7 @@ export default function Stats({ url }) {
   if (!stats) return <p>Loading...</p>;
   return (
     <div className='sidestat'>
-      <h1>Global Stat</h1>
+      <h1>Global Stat 🌏</h1>
       <StatBlock>
         <span>
           ● <b>{stats.confirmed.value}</b> confirmed cases
