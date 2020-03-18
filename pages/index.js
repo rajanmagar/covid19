@@ -348,7 +348,8 @@ export default function IndexPage() {
           </a>
         </span>
         <span>
-          made by{' '}
+          <Github />
+          Made by{' '}
           <a
             href='http://https://github.com/rajanmagar'
             target='_blank'
