@@ -17,7 +17,9 @@ export default function Country() {
         <select
           defaultValue='IND'
           onChange={e => {
-            setSelectedCountry(e.target.value);
+            setSelectedCountry(
+              e.target.value === 'South Korea' ? 'Korea, South' : e.target.value
+            );
           }}
         >
           {Object.entries(countries.countries).map(([country, code]) => (
