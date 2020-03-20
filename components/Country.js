@@ -17,9 +17,7 @@ export default function Country() {
         <select
           defaultValue='IND'
           onChange={e => {
-            setSelectedCountry(
-              e.target.value === 'South Korea' ? 'Korea, South' : e.target.value
-            );
+            setSelectedCountry(e.target.value);
           }}
         >
           {Object.entries(countries.countries).map(([country, code]) => (
@@ -30,7 +28,9 @@ export default function Country() {
         </select>
       </label>
       <Stats
-        url={`https://covid19.mathdro.id/api/countries/${selectedCountry}`}
+        url={`https://covid19.mathdro.id/api/countries/${
+          selectedCountry === 'KOR' ? 'Korea, South' : selectedCountry
+        }`}
       />
     </div>
   );
