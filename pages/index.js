@@ -5,6 +5,7 @@ import Logo from '../components/Logo';
 import Github from '../components/Github';
 import Head from 'next/head';
 import moment from 'moment';
+import Bar from '../components/Bar';
 
 import LogRocket from 'logrocket';
 LogRocket.init('iusl8y/corona');
@@ -14,7 +15,6 @@ const GlobalStyle = createGlobalStyle`
 html {
   font-family: 'Quicksand', sans-serif;
     body {
-        height: 100vh;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -29,21 +29,15 @@ html {
 section {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 70px auto 70px;
     grid-gap: 1em;
     padding: 1em 0;
     justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 1340px;
-    max-height: 600px;
-    height: auto;
-    width: calc(100vw - 400px);
     background: #307e57;
     position: relative;
     @media (max-width: 460px) {
-    height: calc(100vh - 5px) !important;
-    width: 100vw !important;
     }
     .countrystat {
       display: grid;
@@ -179,6 +173,15 @@ section {
         }
       }
     }
+    .bar {
+      grid-row: 3;
+      grid-column: 1 / 4;
+      height: 600px;
+      margin-top: 2rem;
+      h3 {
+        text-align: center;
+      }
+    }
     .para {
         padding: 2em;
         text-align: center;
@@ -190,7 +193,7 @@ section {
         }
     }
     .tips {
-      grid-row: 3;
+      grid-row: 4;
       grid-column: 1 / 4;
       font-size: 12px;
       font-style: italic;
@@ -228,8 +231,6 @@ section {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: calc(100vh - 80px);
-      width: calc(100vw - 30px);
       flex-direction: column;
       header {
         display: flex;
@@ -287,7 +288,7 @@ footer {
 `;
 
 export default function IndexPage() {
-  return (
+  return GlobalStyle ? (
     <>
       <Head>
         <title>COVID19 - Corona Virus</title>
@@ -324,6 +325,7 @@ export default function IndexPage() {
         </p>
         <Country />
         <SideState url='https://covid19.mathdro.id/api' />
+        <Bar />
         <p className='tips'>
           <span>Precautions: </span>
           Wash your hands frequently ● Maintain social distance ● Avoid touching
@@ -373,5 +375,7 @@ export default function IndexPage() {
         </span>
       </footer>
     </>
+  ) : (
+    'Loading..'
   );
 }
