@@ -178,8 +178,12 @@ section {
       grid-column: 1 / 4;
       height: 600px;
       margin-top: 2rem;
+      box-shadow: none;
       h3 {
         text-align: center;
+      }
+      @media (max-width: 768px) {
+        width: 90%;
       }
     }
     .para {

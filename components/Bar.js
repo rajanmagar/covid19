@@ -50,7 +50,7 @@ const Bar = () => {
           top: 10,
           right: isMobile ? 2 : 200,
           bottom: 50,
-          left: isMobile ? 2 : 200
+          left: isMobile ? 60 : 200
         }}
         colors={{ scheme: 'nivo' }}
         innerPadding={4}
