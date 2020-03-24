@@ -10,6 +10,9 @@ export default function Country() {
   if (!countries) return <p>Loading...</p>;
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
+  let list = Object.entries(countries.countries)
+    .map(([country, code]) => code)
+    .filter(Boolean);
   return (
     <div className='countrystat'>
       <h2>{selectedCountry} Stat</h2>
@@ -20,9 +23,9 @@ export default function Country() {
             setSelectedCountry(e.target.value);
           }}
         >
-          {Object.entries(countries.countries).map(([country, code]) => (
-            <option key={code} value={countries.iso3[code]}>
-              {country}
+          {list.map((item, index) => (
+            <option key={index} value={item.iso3}>
+              {item.name}
             </option>
           ))}
         </select>
