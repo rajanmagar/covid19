@@ -341,11 +341,11 @@ export default function IndexPage() {
       <footer>
         <span>
           <a
-            href='https://github.com/rajanmagar/covid19'
+            href='http://moengage.com/'
             target='_blank'
             rel='noopener noreferrer'
           >
-            👐 Contribute
+            Powered By Moengage
           </a>
         </span>
         <span>
